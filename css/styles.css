@@ -1,0 +1,54 @@
+body {
+  background-color: #000;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #FFD700;
+  font-size: 32px;
+  margin-top: 0;
+}
+
+#number-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.number:hover {
+  background-color: #45a049;
+}
+
+.number.clicked {
+  background-color: #8B0000;
+}
+
+#score {
+  font-weight: bold;
+  font-size: 24px;
+}
