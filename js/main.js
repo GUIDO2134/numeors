@@ -89,6 +89,5 @@ function resetGame() {
   timerElement.textContent = "";
   createNumbers();
 }
-
 // Inicializar el juego al cargar la página
 createNumbers();
