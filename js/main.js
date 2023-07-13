@@ -8,6 +8,7 @@ let currentNumber = 1;
 let score = 0;
 let timer;
 
+// Función para desordenar los números en el arreglo
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -15,6 +16,7 @@ function shuffleArray(array) {
   }
 }
 
+// Crear los números del juego y agregarlos al contenedor
 function createNumbers() {
   numbers = Array.from({ length: totalNumbers }, (_, index) => index + 1);
   shuffleArray(numbers);
@@ -28,6 +30,7 @@ function createNumbers() {
   }
 }
 
+// Manejador de evento para cuando se hace clic en un número
 function onNumberClick(event) {
   const clickedNumber = event.target;
   const numberValue = parseInt(clickedNumber.textContent);
@@ -57,8 +60,9 @@ function onNumberClick(event) {
   }
 }
 
+// Iniciar el temporizador
 function startTimer() {
-  let time = 25;
+  let time = 15;
   timerElement.textContent = time;
 
   timer = setInterval(function() {
@@ -75,6 +79,7 @@ function startTimer() {
   }, 1000);
 }
 
+// Reiniciar el juego
 function resetGame() {
   clearInterval(timer);
   numberContainer.innerHTML = "";
@@ -85,4 +90,5 @@ function resetGame() {
   createNumbers();
 }
 
+// Inicializar el juego al cargar la página
 createNumbers();
