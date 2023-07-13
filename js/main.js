@@ -2,7 +2,7 @@ const numberContainer = document.getElementById("number-container");
 const scoreElement = document.getElementById("score");
 const timerElement = document.getElementById("timer");
 
-const totalNumbers = 20;
+const totalNumbers = 30;
 let numbers = [];
 let currentNumber = 1;
 let score = 0;
@@ -62,7 +62,7 @@ function onNumberClick(event) {
 
 // Iniciar el temporizador
 function startTimer() {
-  let time = 15;
+  let time = 20;
   timerElement.textContent = time;
 
   timer = setInterval(function() {
